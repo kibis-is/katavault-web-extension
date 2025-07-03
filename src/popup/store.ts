@@ -8,21 +8,24 @@ import { STORE_NAME } from '@/popup/constants';
 import ExtensionStorageAdapter from '@/popup/facades/ExtensionStorageAdapter';
 
 // slices
+import createAuthenticationSlice from '@/popup/slices/createAuthenticationSlice';
 import createLayoutSlice from '@/popup/slices/createLayoutSlice';
 
 // types
 import type { TPersistedState, TState } from '@/popup/types';
 
-const useStore = create<TState>()(
+const store = create<TState>()(
   devtools(
     persist(
       (...api) => ({
+        ...createAuthenticationSlice(...api),
         ...createLayoutSlice(...api),
       }),
       {
         name: STORE_NAME,
-        partialize: ({ colorMode }) => ({
+        partialize: ({ colorMode, encryptedChallenge }) => ({
           colorMode,
+          encryptedChallenge,
         }),
         storage: createJSONStorage(() => new ExtensionStorageAdapter()),
         version: 0,
@@ -34,4 +37,4 @@ const useStore = create<TState>()(
   )
 );
 
-export default useStore;
+export default store;
