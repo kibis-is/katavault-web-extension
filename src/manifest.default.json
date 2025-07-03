@@ -1,0 +1,16 @@
+{
+  "name": "Katavault",
+  "version": "1.0.0",
+  "description": "The Katavault browser extension leverages your wallet accounts to securely sign in to web applications.",
+  "author": "Kibisis OÜ",
+  "icons": {
+    "48": "icons/icon-48.png",
+    "96": "icons/icon-96.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["middleware.js"]
+    }
+  ]
+}
