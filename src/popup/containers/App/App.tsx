@@ -10,9 +10,14 @@ import { en } from '@/common/translations';
 // types
 import type { IProps } from './types';
 
+// utilities
+import useStore from '@/popup/utilities/store/useStore';
+
 const App: FC<IProps> = ({ debug, logger }) => {
+  const { colorMode } = useStore();
+
   return (
-    <KibisisAppProvider debug={debug} logger={logger} translations={en}>
+    <KibisisAppProvider colorMode={colorMode} debug={debug} logger={logger} translations={en}>
       <Root />
     </KibisisAppProvider>
   );

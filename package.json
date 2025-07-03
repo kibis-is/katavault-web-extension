@@ -75,16 +75,18 @@
     "web-ext": "^8.7.1"
   },
   "dependencies": {
+    "@chakra-ui/color-mode": "^2.2.0",
     "@chakra-ui/react": "3.x",
     "@emotion/react": ">=11.x",
     "@kibisis/icons": "^1.0.0",
-    "@kibisis/react": "^1.1.0",
+    "@kibisis/react": "^1.3.0",
     "@kibisis/utilities": "^1.0.0",
     "i18next": "^25.2.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-i18next": "^15.5.2",
-    "webextension-polyfill": "^0.12.0"
+    "webextension-polyfill": "^0.12.0",
+    "zustand": "^5.0.6"
   },
   "pnpm": {
     "onlyBuiltDependencies": [

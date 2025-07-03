@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@chakra-ui/color-mode':
+        specifier: ^2.2.0
+        version: 2.2.0(react@19.1.0)
       '@chakra-ui/react':
         specifier: 3.x
         version: 3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -18,8 +21,8 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(react@19.1.0)
       '@kibisis/react':
-        specifier: ^1.1.0
-        version: 1.1.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        specifier: ^1.3.0
+        version: 1.3.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@kibisis/utilities':
         specifier: ^1.0.0
         version: 1.0.0
@@ -38,6 +41,9 @@ importers:
       webextension-polyfill:
         specifier: ^0.12.0
         version: 0.12.0
+      zustand:
+        specifier: ^5.0.6
+        version: 5.0.6(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@anolilab/semantic-release-pnpm':
         specifier: ^1.1.11
@@ -123,9 +129,6 @@ importers:
       shx:
         specifier: ^0.4.0
         version: 0.4.0
-      tailwindcss:
-        specifier: ^4.1.8
-        version: 4.1.11
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
@@ -254,6 +257,16 @@ packages:
   '@babel/types@7.28.0':
     resolution: {integrity: sha512-jYnje+JyZG5YThjHiF28oT4SIZLnYOcSBb6+SDaFIyzDVSkXQmQQYclJ2R+YxcdmK0AX6x1E5OQNtuh3jHDrUg==}
     engines: {node: '>=6.9.0'}
+
+  '@chakra-ui/color-mode@2.2.0':
+    resolution: {integrity: sha512-niTEA8PALtMWRI9wJ4LL0CSBDo8NBfLNp4GD6/0hstcm3IlbBHTVKxN6HwSaoNYfphDQLxCjT4yG+0BJA5tFpg==}
+    peerDependencies:
+      react: '>=18'
+
+  '@chakra-ui/react-use-safe-layout-effect@2.1.0':
+    resolution: {integrity: sha512-Knbrrx/bcPwVS1TorFdzrK/zWA8yuU/eaXDkNj24IrKoRlQrSBFarcgAEzlCHtzuhufP3OULPkELTzz91b0tCw==}
+    peerDependencies:
+      react: '>=18'
 
   '@chakra-ui/react@3.21.1':
     resolution: {integrity: sha512-tc8SAeOZbOeOSY+BROE6o1FyzoS8sAuC6TAwlfUCZWhv9CMsxBisC88D4WI/puwnZVfUbzzhdVEQmWkCbJK6ag==}
@@ -695,8 +708,8 @@ packages:
   '@kibisis/icons@1.0.0':
     resolution: {integrity: sha512-bETRfzsF3epPhS4rVeITP4HU7oduKpxaXKsXAkhFg+dCRglVs9MVTULnrqlYIWz4t1AhwGoKQVCb9J7gIMihyA==}
 
-  '@kibisis/react@1.1.0':
-    resolution: {integrity: sha512-rxTEpALqgM1DrILTSmlHizxm+Nu2Elk/d0Pr6RDqosHe2Ahq9RZpgnQTeBd10PXLa+lWNY5I5VbPPtfTiRmbIw==}
+  '@kibisis/react@1.3.0':
+    resolution: {integrity: sha512-CECHdT1/aF2bKm/sSy4TutXy+a/32f8dVPQ/VO/eznwvkuVMayb2KNR8leI/hrsszLwCD/U1VOVqb0+vapoXCg==}
     peerDependencies:
       '@chakra-ui/react': 3.x
       '@emotion/react': '>=11.x'
@@ -4189,6 +4202,24 @@ packages:
   zip-dir@2.0.0:
     resolution: {integrity: sha512-uhlsJZWz26FLYXOD6WVuq+fIcZ3aBPGo/cFdiLlv3KNwpa52IF3ISV8fLhQLiqVu5No3VhlqlgthN6gehil1Dg==}
 
+  zustand@5.0.6:
+    resolution: {integrity: sha512-ihAqNeUVhe0MAD+X8M5UzqyZ9k3FFZLBTtqo6JLPwV53cbRB/mJwBI0PxcIgqhBBHlEs8G45OTDTMq3gNcLq3A==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
 
   '@agoralabs-sh/uuid@1.1.0':
@@ -4402,6 +4433,15 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+
+  '@chakra-ui/color-mode@2.2.0(react@19.1.0)':
+    dependencies:
+      '@chakra-ui/react-use-safe-layout-effect': 2.1.0(react@19.1.0)
+      react: 19.1.0
+
+  '@chakra-ui/react-use-safe-layout-effect@2.1.0(react@19.1.0)':
+    dependencies:
+      react: 19.1.0
 
   '@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)':
     dependencies:
@@ -4854,7 +4894,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@kibisis/react@1.1.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@kibisis/react@1.3.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
       '@chakra-ui/react': 3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -8590,3 +8630,8 @@ snapshots:
     dependencies:
       async: 3.2.6
       jszip: 3.10.1
+
+  zustand@5.0.6(@types/react@19.1.8)(react@19.1.0):
+    optionalDependencies:
+      '@types/react': 19.1.8
+      react: 19.1.0
