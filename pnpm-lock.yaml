@@ -21,23 +21,17 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0(react@19.1.0)
       '@kibisis/react':
-        specifier: ^1.3.0
-        version: 1.3.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        specifier: ^1.4.0
+        version: 1.4.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@kibisis/utilities':
         specifier: ^1.0.0
         version: 1.0.0
-      i18next:
-        specifier: ^25.2.1
-        version: 25.3.0(typescript@5.8.3)
       react:
         specifier: ^19.1.0
         version: 19.1.0
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
-      react-i18next:
-        specifier: ^15.5.2
-        version: 15.5.3(i18next@25.3.0(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       react-icons:
         specifier: ^5.5.0
         version: 5.5.0(react@19.1.0)
@@ -123,6 +117,9 @@ importers:
       husky:
         specifier: ^9.1.7
         version: 9.1.7
+      i18next:
+        specifier: ^25.3.0
+        version: 25.3.0(typescript@5.8.3)
       lint-staged:
         specifier: ^16.1.0
         version: 16.1.2
@@ -714,8 +711,8 @@ packages:
   '@kibisis/icons@1.0.0':
     resolution: {integrity: sha512-bETRfzsF3epPhS4rVeITP4HU7oduKpxaXKsXAkhFg+dCRglVs9MVTULnrqlYIWz4t1AhwGoKQVCb9J7gIMihyA==}
 
-  '@kibisis/react@1.3.0':
-    resolution: {integrity: sha512-CECHdT1/aF2bKm/sSy4TutXy+a/32f8dVPQ/VO/eznwvkuVMayb2KNR8leI/hrsszLwCD/U1VOVqb0+vapoXCg==}
+  '@kibisis/react@1.4.0':
+    resolution: {integrity: sha512-1gQflzjN1NExQjc6QjdhqKcZGVi7tewm8PBDC1apU/3DpSfChuXApO056ylEMfcGgYXqstOHSOtp5xu7dZz7IQ==}
     peerDependencies:
       '@chakra-ui/react': 3.x
       '@emotion/react': '>=11.x'
@@ -4924,7 +4921,7 @@ snapshots:
     transitivePeerDependencies:
       - react
 
-  '@kibisis/react@1.3.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@kibisis/react@1.4.0(@chakra-ui/react@3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
       '@chakra-ui/react': 3.21.1(@emotion/react@11.14.0(@types/react@19.1.8)(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@emotion/react': 11.14.0(@types/react@19.1.8)(react@19.1.0)
@@ -7907,16 +7904,6 @@ snapshots:
       '@babel/runtime': 7.27.6
       html-parse-stringify: 3.0.1
       i18next: 24.2.3(typescript@5.8.3)
-      react: 19.1.0
-    optionalDependencies:
-      react-dom: 19.1.0(react@19.1.0)
-      typescript: 5.8.3
-
-  react-i18next@15.5.3(i18next@25.3.0(typescript@5.8.3))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3):
-    dependencies:
-      '@babel/runtime': 7.27.6
-      html-parse-stringify: 3.0.1
-      i18next: 25.3.0(typescript@5.8.3)
       react: 19.1.0
     optionalDependencies:
       react-dom: 19.1.0(react@19.1.0)

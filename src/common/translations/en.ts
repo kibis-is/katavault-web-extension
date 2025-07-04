@@ -1,4 +1,9 @@
+import type { ResourceKey } from 'i18next';
+
 export default {
+  buttons: {
+    getStarted: 'Get Started',
+  },
   captions: {
     applicationDescription:
       'The Katavault browser extension leverages your wallet accounts to securely sign in to web applications.',
@@ -9,4 +14,4 @@ export default {
   titles: {
     application: 'Katavault',
   },
-} satisfies Record<string, unknown>;
+} satisfies ResourceKey;

@@ -10,7 +10,7 @@ import { TState } from '@/popup/types';
 export default function rootLoader(
   store: UseBoundStore<StoreApi<TState>>
 ): (args: LoaderFunctionArgs) => Response | null {
-  const { encryptedChallenge } = store.getState();
+  const { encryptedChallenge } = store();
 
   return ({ request }) => {
     const path = new URL(request.url).pathname.split('/').filter((value) => value.length > 0)[0];

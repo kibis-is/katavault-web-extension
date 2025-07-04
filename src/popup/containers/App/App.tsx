@@ -4,8 +4,8 @@ import { type FC } from 'react';
 // containers
 import Router from '@/popup/containers/Router';
 
-// store
-import store from '@/popup/store';
+// selectors
+import { useColorMode } from '@/popup/selectors';
 
 // translations
 import { en } from '@/common/translations';
@@ -14,10 +14,18 @@ import { en } from '@/common/translations';
 import type { IProps } from './types';
 
 const App: FC<IProps> = ({ debug, logger }) => {
-  const { colorMode } = store.getState();
+  // selectors
+  const colorMode = useColorMode();
 
   return (
-    <KibisisAppProvider colorMode={colorMode} debug={debug} logger={logger} translations={en}>
+    <KibisisAppProvider
+      colorMode={colorMode}
+      debug={debug}
+      logger={logger}
+      translations={{
+        en,
+      }}
+    >
       <Router />
     </KibisisAppProvider>
   );
