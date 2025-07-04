@@ -4,7 +4,7 @@
   "description": "The Katavault browser extension leverages your wallet accounts to securely sign in to web applications.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kibis-is/katavualt-web-extension"
+    "url": "https://github.com/kibis-is/katavault-web-extension"
   },
   "license": "AGPL-3.0-or-later",
   "private": true,
