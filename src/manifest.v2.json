@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "permissions": ["<all_urls>", "storage", "unlimitedStorage"],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "Katavault"
+  },
+  "background": {
+    "scripts": ["worker.js"],
+    "persistent": true
+  },
+  "web_accessible_resources": ["client.js"]
+}

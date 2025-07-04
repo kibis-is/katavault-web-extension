@@ -1,0 +1,17 @@
+name: "Create Env File"
+
+description: "Creates an .env file"
+
+inputs:
+  debug:
+    description: "Whether to output debug information"
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: "📝 Create .env file"
+      run: |
+        rm -f .env
+        echo "VITE_DEBUG=${{ inputs.debug }}" >> .env
+      shell: bash

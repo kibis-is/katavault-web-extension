@@ -1,0 +1,97 @@
+{
+  "name": "katavault-web-extension",
+  "version": "1.0.0",
+  "description": "The Katavault browser extension leverages your wallet accounts to securely sign in to web applications.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kibis-is/katavualt-web-extension"
+  },
+  "license": "AGPL-3.0-or-later",
+  "private": true,
+  "type": "module",
+  "files": [
+    "dist",
+    "COPYING"
+  ],
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "packageManager": "pnpm@10.3.0",
+  "scripts": {
+    "build:chrome": "shx rm -rf .chrome_build && vite build --config vite.chrome.config.ts --mode production",
+    "build:edge": "shx rm -rf .edge_build && vite build --config vite.edge.config.ts --mode production",
+    "build:firefox": "shx rm -rf .firefox_build && vite build --config vite.firefox.config.ts --mode production",
+    "build:opera": "shx rm -rf .opera_build && vite build --config vite.opera.config.ts --mode production",
+    "check:types": "tsc --noEmit",
+    "dev:chrome": "shx rm -rf .chrome_build && vite build --config vite.chrome.config.ts --mode development --watch",
+    "dev:firefox": "shx rm -rf .firefox_build && vite build --config vite.firefox.config.ts --mode development --watch",
+    "generate:env": "shx cp -n .env.example .env",
+    "install:chrome": "./scripts/install_chrome.sh",
+    "install:firefox": "./scripts/install_firefox.sh",
+    "lint": "eslint .",
+    "package:chrome": "./scripts/package.sh \"chrome\"",
+    "package:edge": "./scripts/package.sh \"edge\"",
+    "package:firefox": "./scripts/package.sh \"firefox\"",
+    "package:opera": "./scripts/package.sh \"opera\"",
+    "postinstall": "pnpm generate:env",
+    "prepare": "husky",
+    "prettier": "prettier --write \"**/*.{cjs,js,json,mjs,ts}\"",
+    "test": "exit 0"
+  },
+  "devDependencies": {
+    "@anolilab/semantic-release-pnpm": "^1.1.11",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@commitlint/types": "^19.8.1",
+    "@eslint/js": "^9.27.0",
+    "@rollup/plugin-replace": "^6.0.2",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/exec": "^7.1.0",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.3",
+    "@semantic-release/release-notes-generator": "^14.0.3",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/node": "^22.15.24",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "@types/webextension-polyfill": "^0.12.3",
+    "@vitejs/plugin-react": "^4.5.0",
+    "concurrently": "^9.1.2",
+    "csstype": "^3.1.3",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "i18next": "^25.3.0",
+    "lint-staged": "^16.1.0",
+    "prettier": "^3.5.3",
+    "semantic-release": "^24.2.5",
+    "shx": "^0.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.33.0",
+    "vite": "^6.3.5",
+    "vite-plugin-static-copy": "^3.0.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "web-ext": "^8.7.1"
+  },
+  "dependencies": {
+    "@chakra-ui/color-mode": "^2.2.0",
+    "@chakra-ui/react": "3.x",
+    "@emotion/react": ">=11.x",
+    "@kibisis/icons": "^1.0.0",
+    "@kibisis/react": "^1.4.0",
+    "@kibisis/utilities": "^1.0.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.2",
+    "webextension-polyfill": "^0.12.0",
+    "zustand": "^5.0.6"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "spawn-sync"
+    ]
+  }
+}
