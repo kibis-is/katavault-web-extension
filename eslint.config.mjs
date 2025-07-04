@@ -23,7 +23,18 @@ export default [
     },
   },
   {
-    ignores: ['.chrome_build', '.edge_build', '.firefox_build', '.opera_build', 'dist/', 'node_modules/'],
+    ignores: [
+      '.chrome',
+      '.chrome_build',
+      '.chrome_profile',
+      '.edge_build',
+      '.firefox',
+      '.firefox_build',
+      'firefox_profile',
+      '.opera_build',
+      'dist/',
+      'node_modules/',
+    ],
   },
   {
     rules: {
